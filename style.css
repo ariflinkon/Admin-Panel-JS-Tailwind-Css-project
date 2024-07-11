@@ -1,0 +1,74 @@
+/* Custom Styles for Admin Panel */
+
+/* Sidebar Header */
+#sidebar-header {
+    background-color: #1a202c; /* Darker shade for header */
+    border-bottom: 1px solid #2d3748; /* Border for separation */
+    color: #ffffff; /* White text color for header */
+}
+
+/* Company Logo */
+#company-logo {
+    border-radius: 50%; /* Make the logo circular */
+    border: 2px solid #2d3748; /* Add a border around the logo */
+}
+
+/* Main Menu */
+#main-menu {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+/* Menu Items */
+.menu-item {
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    color: #9b9b9b; /* White text color for menu items */
+}
+
+.menu-item:hover {
+    background-color: #4a5568; /* Slightly lighter shade on hover */
+}
+
+/* Submenu */
+.submenu {
+    display: none; /* Hide submenu by default */
+}
+
+.submenu.hidden {
+    display: block; /* Show submenu when the hidden class is added */
+}
+
+/* Submenu Items */
+.submenu-item {
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    color: #a8a8a8; /* White text color for submenu items */
+}
+
+.submenu-item:hover {
+    background-color: #1b1b1b; /* Slightly lighter shade on hover */
+}
+
+/* Content Area */
+#content {
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding */
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    color: rgba(45, 55, 72, 0.8); /* Darker text color with transparency */
+}
+
+a {
+    color: rgba(49, 130, 206, 0.8); /* Blue color for links with transparency */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}

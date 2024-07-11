@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="Js/script.js"></script>
+    <script src="Js/leftbar.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Left Section: Navigation -->
+        <nav id="sidebar" class="w-64 bg-gray-800 text-white h-screen">
+            <div id="sidebar-header" class="p-6">
+                <h1 class="text-2xl font-bold">Admin Panel</h1>
+            </div>
+
+            <div id="logo-container">
+                <img id="company-logo" src="path/to/your/logo.png" alt="Company Logo" class="w-32 h-auto mx-auto mb-6">
+            </div>
+
+            <ul id="main-menu" class="mt-6">
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6"></path></svg>
+                    <span>Dashboard</span>
+                </li>
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 20h9"></path></svg>
+                    <span>Pages</span>
+                </li>
+                <ul id="pages-submenu" class="submenu ml-8">
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Login</span>
+                    </li>
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Register</span>
+                    </li>
+                </ul>
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Components</span>
+                </li>
+                <ul id="components-submenu" class="submenu ml-8">
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>All</span>
+                    </li>
+                </ul>
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6"></path></svg>
+                    <span>Form</span>
+                </li>
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Users</span>
+                </li>
+                <li class="menu-item flex items-center p-4 hover:bg-gray-700">
+                    <svg class="icon w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                    <span>Settings</span>
+                </li>
+                <ul id="settings-submenu" class="submenu ml-8">
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Setting</span>
+                    </li>
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Profile</span>
+                    </li>
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Account</span>
+                    </li>
+                    <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
+                        <span>Logout</span>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+        <!-- Right Section: Content -->
+        <div id="content" class="flex-1 p-6">
+            <!-- Top Menu Bar -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="text-2xl font-bold">Dashboard</div>
+                <div class="flex items-center space-x-4">
+                    <!-- Notification Menu -->
+                    <div class="relative">
+                        <button class="focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">All Notifications</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Mark all as read</a>
+                        </div>
+                    </div>
+                    <!-- Profile Menu -->
+                    <div class="relative">
+                        <button class="focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Your Profile</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                <h2 class="text-xl font-bold mb-2">Content Header</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus aperiam aut. Eveniet quibusdam provident repellat consectetur nemo, sunt tenetur deserunt nam nobis nisi inventore dignissimos repudiandae aliquid laudantium beatae.</p>
+                <table class="min-w-full bg-white mt-4">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Title 1</th>
+                            <th class="py-2 px-4 border-b">Title 2</th>
+                            <th class="py-2 px-4 border-b">Title 3</th>
+                            <th class="py-2 px-4 border-b">Title 4</th>
+                            <th class="py-2 px-4 border-b">Title 5</th>
+                            <th class="py-2 px-4 border-b">Title 6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Data 1</td>
+                            <td class="py-2 px-4 border-b">Data 2</td>
+                            <td class="py-2 px-4 border-b">Data 3</td>
+                            <td class="py-2 px-4 border-b">Data 4</td>
+                            <td class="py-2 px-4 border-b">Data 5</td>
+                            <td class="py-2 px-4 border-b">Data 6</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Data 1</td>
+                            <td class="py-2 px-4 border-b">Data 2</td>
+                            <td class="py-2 px-4 border-b">Data 3</td>
+                            <td class="py-2 px-4 border-b">Data 4</td>
+                            <td class="py-2 px-4 border-b">Data 5</td>
+                            <td class="py-2 px-4 border-b">Data 6</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Data 1</td>
+                            <td class="py-2 px-4 border-b">Data 2</td>
+                            <td class="py-2 px-4 border-b">Data 3</td>
+                            <td class="py-2 px-4 border-b">Data 4</td>
+                            <td class="py-2 px-4 border-b">Data 5</td>
+                            <td class="py-2 px-4 border-b">Data 6</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 px-4 border-b">Data 1</td>
+                            <td class="py-2 px-4 border-b">Data 2</td>
+                            <td class="py-2 px-4 border-b">Data 3</td>
+                            <td class="py-2 px-4 border-b">Data 4</td>
+                            <td class="py-2 px-4 border-b">Data 5</td>
+                            <td class="py-2 px-4 border-b">Data 6</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Footer -->
+            <footer class="text-center py-4">
+                <p class="text-gray-600">Copyright © 2022 All rights reserved | This template is made with by Arif Jahan Linkon</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
