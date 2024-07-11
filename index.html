@@ -9,23 +9,18 @@
     <link rel="stylesheet" href="style.css">
     <script src="Js/script.js"></script>
     <script src="Js/leftbar.js"></script>
-
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
 </head>
 <body class="bg-gray-100">
     <div class="flex">
         <!-- Left Section: Navigation -->
         <nav id="sidebar" class="w-64 bg-gray-800 text-white h-screen">
             <div id="sidebar-header" class="p-6">
-                <h1 class="text-2xl font-bold">Admin Panel</h1>
+                <h1 class="text-2xl font-bold">Admin Dashboard</h1>
             </div>
 
             <div id="logo-container">
-                <img id="company-logo" src="path/to/your/logo.png" alt="Company Logo" class="w-32 h-auto mx-auto mb-6">
+              <img id="company-logo" src="https://via.placeholder.com/150" alt="Demo Company Logo" class="w-32 h-auto mx-auto mb-6">
+               
             </div>
 
             <ul id="main-menu" class="mt-6">
@@ -83,114 +78,115 @@
             </ul>
         </nav>
         <!-- Right Section: Content -->
-        <div id="content" class="flex-1 p-6">
-            <!-- Top Menu Bar -->
-            <div class="flex justify-between items-center mb-6">
-                <div class="text-2xl font-bold">Dashboard</div>
-                <div class="flex items-center space-x-4">
-                    <!-- Notification Menu -->
-                    <div class="relative">
-                        <button class="focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
-                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">All Notifications</a>
-                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Mark all as read</a>
-                        </div>
-                    </div>
-                    <!-- Profile Menu -->
-                    <div class="relative">
-                        <button class="focus:outline-none">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        </button>
-                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
-                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Your Profile</a>
-                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
-                            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Out</a>
-                        </div>
-                    </div>
+<div id="content" class="flex-1 p-6">
+    <!-- Top Menu Bar -->
+    <div id="top-menu-bar" class="flex justify-between items-center mb-6 border-b border-gray-300">
+        <div id="hide-leftbar" class="text-2xl font-bold flex items-center cursor-pointer">
+         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+
+     </div>
+        <div id="top-menu-items" class="flex items-center space-x-4">
+            <!-- Notification Menu -->
+            <div id="notification-menu" class="relative">
+                <button id="notification-button" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                </button>
+                <div id="notification-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">All Notifications</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Mark all as read</a>
                 </div>
             </div>
-            <!-- Grid Layout -->
-            <div class="grid grid-cols-3 gap-4 mb-6">
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <!-- Profile Menu -->
+            <div id="profile-menu" class="relative">
+                <button id="profile-button" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </button>
+                <div id="profile-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Your Profile</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Out</a>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-4 mb-6">
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md mb-6">
-                <h2 class="text-xl font-bold mb-2">Content Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus aperiam aut. Eveniet quibusdam provident repellat consectetur nemo, sunt tenetur deserunt nam nobis nisi inventore dignissimos repudiandae aliquid laudantium beatae.</p>
-                <table class="min-w-full bg-white mt-4">
-                    <thead>
-                        <tr>
-                            <th class="py-2 px-4 border-b">Title 1</th>
-                            <th class="py-2 px-4 border-b">Title 2</th>
-                            <th class="py-2 px-4 border-b">Title 3</th>
-                            <th class="py-2 px-4 border-b">Title 4</th>
-                            <th class="py-2 px-4 border-b">Title 5</th>
-                            <th class="py-2 px-4 border-b">Title 6</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="py-2 px-4 border-b">Data 1</td>
-                            <td class="py-2 px-4 border-b">Data 2</td>
-                            <td class="py-2 px-4 border-b">Data 3</td>
-                            <td class="py-2 px-4 border-b">Data 4</td>
-                            <td class="py-2 px-4 border-b">Data 5</td>
-                            <td class="py-2 px-4 border-b">Data 6</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 border-b">Data 1</td>
-                            <td class="py-2 px-4 border-b">Data 2</td>
-                            <td class="py-2 px-4 border-b">Data 3</td>
-                            <td class="py-2 px-4 border-b">Data 4</td>
-                            <td class="py-2 px-4 border-b">Data 5</td>
-                            <td class="py-2 px-4 border-b">Data 6</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 border-b">Data 1</td>
-                            <td class="py-2 px-4 border-b">Data 2</td>
-                            <td class="py-2 px-4 border-b">Data 3</td>
-                            <td class="py-2 px-4 border-b">Data 4</td>
-                            <td class="py-2 px-4 border-b">Data 5</td>
-                            <td class="py-2 px-4 border-b">Data 6</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4 border-b">Data 1</td>
-                            <td class="py-2 px-4 border-b">Data 2</td>
-                            <td class="py-2 px-4 border-b">Data 3</td>
-                            <td class="py-2 px-4 border-b">Data 4</td>
-                            <td class="py-2 px-4 border-b">Data 5</td>
-                            <td class="py-2 px-4 border-b">Data 6</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- Footer -->
-            <footer class="text-center py-4">
-                <p class="text-gray-600">Copyright © 2022 All rights reserved | This template is made with by Arif Jahan Linkon</p>
-            </footer>
         </div>
     </div>
-</body>
-</html>
+    <!-- Grid Layout -->
+<div id="grid-layout-1" class="grid grid-cols-3 gap-4 mb-6">
+    <div id="content-block-1" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
+        <h2 class="text-lg font-normal leading-snug text-gray-800 mb-0.5">Content Header</h2>
+        <p class="sub-header" id="sub-header-1">Sub header</p>
+    </div>
+    <div id="content-block-2" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
+        <h2 class="text-lg font-normal leading-snug text-gray mb-0.5">Content Header</h2>
+        <p class="sub-header" id="sub-header-2">Sub header</p>
+    </div>
+    <div id="content-block-3" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
+        <h2 class="text-lg font-normal leading-snug text-gray mb-0.5">Content Header</h2>
+        <p class="sub-header" id="sub-header-3">Sub header</p>
+    </div>
+</div>
+<div id="grid-layout-2" class="grid grid-cols-2 gap-4 mb-6">
+    <div id="content-block-4" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
+        <h2 class="text-lg font-normal leading-snug text-gray mb-0.5">Content Header</h2>
+        <p class="sub-header" id="sub-header-4">Sub header</p>
+    </div>
+    <div id="content-block-5" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
+        <h2 class="text-lg font-normal leading-snug text-gray mb-0.5">Content Header</h2>
+        <p class="sub-header" id="sub-header-5">Sub header</p>
+    </div>
+</div>
+<div id="content-block-6" class="bg-white p-4 rounded-lg border border-gray-300 mb-6">
+    <h2 class="text-lg font-normal leading-snug text-gray mb-0.5">Content Header</h2>
+    <p class="sub-header mb-4" id="sub-header-6">Sub header</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus aperiam aut. Eveniet quibusdam provident repellat consectetur nemo, sunt tenetur deserunt nam nobis nisi inventore dignissimos repudiandae aliquid laudantium beatae.</p>
+    <table id="data-table" class="min-w-full bg-white mt-4">
+        <thead class="bg-gray-200 border">
+            <tr>
+                <th class="py-2 px-4 border-b border-gray-400">Title 1</th>
+                <th class="py-2 px-4 border-b border-gray-400">Title 2</th>
+                <th class="py-2 px-4 border-b border-gray-400">Title 3</th>
+                <th class="py-2 px-4 border-b border-gray-400">Title 4</th>
+                <th class="py-2 px-4 border-b border-gray-400">Title 5</th>
+                <th class="py-2 px-4 border-b border-gray-400">Title 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="py-2 px-4 border-b">Data 1</td>
+                <td class="py-2 px-4 border-b">Data 2</td>
+                <td class="py-2 px-4 border-b">Data 3</td>
+                <td class="py-2 px-4 border-b">Data 4</td>
+                <td class="py-2 px-4 border-b">Data 5</td>
+                <td class="py-2 px-4 border-b">Data 6</td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border-b">Data 1</td>
+                <td class="py-2 px-4 border-b">Data 2</td>
+                <td class="py-2 px-4 border-b">Data 3</td>
+                <td class="py-2 px-4 border-b">Data 4</td>
+                <td class="py-2 px-4 border-b">Data 5</td>
+                <td class="py-2 px-4 border-b">Data 6</td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border-b">Data 1</td>
+                <td class="py-2 px-4 border-b">Data 2</td>
+                <td class="py-2 px-4 border-b">Data 3</td>
+                <td class="py-2 px-4 border-b">Data 4</td>
+                <td class="py-2 px-4 border-b">Data 5</td>
+                <td class="py-2 px-4 border-b">Data 6</td>
+            </tr>
+            <tr>
+                <td class="py-2 px-4 border-b">Data 1</td>
+                <td class="py-2 px-4 border-b">Data 2</td>
+                <td class="py-2 px-4 border-b">Data 3</td>
+                <td class="py-2 px-4 border-b">Data 4</td>
+                <td class="py-2 px-4 border-b">Data 5</td>
+                <td class="py-2 px-4 border-b">Data 6</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <!-- Footer -->
+   <footer id="footer" class="text-left py-4">
+    <p class="text-gray-400 text-xs">Copyright © 2022 All rights reserved | This template is made with by Arif Jahan Linkon</p>
+</footer>
+</div>

@@ -1,3 +1,21 @@
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    color: rgba(45, 55, 72, 0.8); /* Darker text color with transparency */
+}
+
+a {
+    color: rgba(49, 130, 206, 0.8); /* Blue color for links with transparency */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+
 /* Custom Styles for Admin Panel */
 
 /* Sidebar Header */
@@ -58,17 +76,3 @@
     padding: 20px; /* Add padding */
 }
 
-/* General Styles */
-body {
-    font-family: 'Roboto', sans-serif; /* Use Roboto font */
-    color: rgba(45, 55, 72, 0.8); /* Darker text color with transparency */
-}
-
-a {
-    color: rgba(49, 130, 206, 0.8); /* Blue color for links with transparency */
-    text-decoration: none; /* Remove underline from links */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline links on hover */
-}
