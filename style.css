@@ -1,8 +1,12 @@
 
 /* General Styles */
-body {
+html, body {
     font-family: 'Roboto', sans-serif; /* Use Roboto font */
     color: rgba(45, 55, 72, 0.8); /* Darker text color with transparency */
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+
 }
 
 a {
@@ -74,5 +78,9 @@ a:hover {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 20px; /* Add padding */
+    overflow-y: auto;
+    height: 100vh; /* Full viewport height */
 }
-
+#sidebar {
+    overflow-y: auto;
+}

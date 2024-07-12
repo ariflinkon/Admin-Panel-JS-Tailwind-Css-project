@@ -1,3 +1,35 @@
+<!--
+Project Name: Admin Panel Template
+Author: Arif Jahan Linkon
+License: Without author permission, any reuse, modification, or distribution of this script or block is illegal.
+
+Features:
+- Responsive design
+- Sidebar navigation with submenus
+- Top menu bar with search, notifications, and profile menu
+- Grid layout for content blocks
+- Dynamic content loading
+- Tailwind CSS for styling
+- JavaScript for interactivity
+
+Usage:
+This template can be used as a starting point for developing admin dashboards, content management systems, or any web application that requires an admin interface. It is designed to be easily integrated with backend systems and can be customized to match the branding and functionality requirements of different projects.
+
+Dependencies:
+- Tailwind CSS (https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css)
+- Google Fonts (https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap)
+
+JavaScript Files:
+- Js/script.js
+- Js/leftbar.js
+- Js/forms.js
+- Js/rightbar.js
+
+Note:
+This template includes placeholder content and images that should be replaced with actual data and assets as per the project requirements.
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +41,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="Js/script.js"></script>
     <script src="Js/leftbar.js"></script>
+    <script src="Js/forms.js"></script>
+    <script src="Js/rightbar.js"></script>
 </head>
 <body class="bg-gray-100">
-    <div class="flex">
+    <div class="flex h-screen">
         <!-- Left Section: Navigation -->
-        <nav id="sidebar" class="w-64 bg-gray-800 text-white h-screen">
+        <nav id="sidebar" class="w-64 bg-gray-800 text-white h-full">
             <div id="sidebar-header" class="p-6">
-                <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+                <h1 class="text-2xl font-bold">Admin Panel</h1>
             </div>
 
             <div id="logo-container">
@@ -34,10 +68,10 @@
                 </li>
                 <ul id="pages-submenu" class="submenu ml-8">
                     <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
-                        <span>Login</span>
+                        <span class="login-link" onclick="loadLoginForm()">Login</span>
                     </li>
                     <li class="submenu-item flex items-center p-4 hover:bg-gray-700">
-                        <span>Register</span>
+                        <span class="register-link" onclick="loadRegisterForm()">Register</span>
                     </li>
                 </ul>
                 <li class="menu-item flex items-center p-4 hover:bg-gray-700">
@@ -78,37 +112,46 @@
             </ul>
         </nav>
         <!-- Right Section: Content -->
+          <!-- Content will be dynamically loaded here -->
+        <!-- <div id="content" class="flex-1 p-6">
+           
+        </div> -->
+
+        <!-- Right Section: Content -->
 <div id="content" class="flex-1 p-6">
     <!-- Top Menu Bar -->
-    <div id="top-menu-bar" class="flex justify-between items-center mb-6 border-b border-gray-300">
-        <div id="hide-leftbar" class="text-2xl font-bold flex items-center cursor-pointer">
-         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-
-     </div>
-        <div id="top-menu-items" class="flex items-center space-x-4">
-            <!-- Notification Menu -->
-            <div id="notification-menu" class="relative">
-                <button id="notification-button" class="focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
-                </button>
-                <div id="notification-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">All Notifications</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Mark all as read</a>
-                </div>
+<div id="top-menu-bar" class="flex justify-between items-center mb-6 border-b border-gray-300 p-4">
+    <div id="hide-leftbar" class="text-2xl font-bold flex items-center cursor-pointer">
+        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </div>
+    <div id="top-menu-items" class="flex items-center space-x-4">
+        <!-- Search Box -->
+        <div id="search-box" class="relative">
+            <input type="text" class="bg-gray-200 rounded-full py-2 px-4 text-gray-700 focus:outline-none" placeholder="Search...">
+        </div>
+        <!-- Notification Menu -->
+        <div id="notification-menu" class="relative">
+            <button id="notification-button" class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            </button>
+            <div id="notification-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">All Notifications</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Mark all as read</a>
             </div>
-            <!-- Profile Menu -->
-            <div id="profile-menu" class="relative">
-                <button id="profile-button" class="focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                </button>
-                <div id="profile-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Out</a>
-                </div>
+        </div>
+        <!-- Profile Menu -->
+        <div id="profile-menu" class="relative">
+            <button id="profile-button" class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4.992 4.992 0 0112 15a4.992 4.992 0 016.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </button>
+            <div id="profile-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20 hidden">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Your Profile</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Settings</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sign Out</a>
             </div>
         </div>
     </div>
+</div>
     <!-- Grid Layout -->
 <div id="grid-layout-1" class="grid grid-cols-3 gap-4 mb-6">
     <div id="content-block-1" class="bg-white p-4 rounded-lg border border-gray-300 h-48">
